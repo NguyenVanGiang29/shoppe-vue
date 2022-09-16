@@ -1,5 +1,6 @@
 <template>
-  <NoticationOrder></NoticationOrder>
+    <NoticationOrder></NoticationOrder>
+  
 </template>
 
 <script>
@@ -10,4 +11,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+/* .container-notication {
+  background: #f0f0f0;
+} */
+</style>
