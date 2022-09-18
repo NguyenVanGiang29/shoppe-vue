@@ -296,6 +296,7 @@ ul {
 ul li {
   list-style: none;
   margin-bottom: 10px;
+  width: max-content;
 }
 
 /* .item:hover ul {
@@ -343,14 +344,13 @@ ul li {
   align-items: center;
 }
 
-
 .time-notication img {
   z-index: 1;
   height: 70%;
   margin-left: 10px;
 }
 
-.item-notication img:hover{
+.item-notication img:hover {
   cursor: pointer;
 }
 
@@ -379,9 +379,6 @@ ul li {
 .icon-notication {
   height: 80px;
   margin-right: 20px;
-}
-
-.content-notication {
 }
 
 .title-notication {

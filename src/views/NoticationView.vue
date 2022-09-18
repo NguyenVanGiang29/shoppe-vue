@@ -1,6 +1,6 @@
 <template>
-    <NoticationOrder></NoticationOrder>
-  
+  <font-awesome-icon icon="fa-light fa-list-dropdown" />
+  <NoticationOrder></NoticationOrder>
 </template>
 
 <script>
@@ -11,8 +11,4 @@ export default {
 };
 </script>
 
-<style scoped>
-/* .container-notication {
-  background: #f0f0f0;
-} */
-</style>
+<style scoped></style>
