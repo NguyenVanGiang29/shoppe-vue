@@ -35,32 +35,29 @@
         <div class="title">THANH TOÁN</div>
         <div class="pay">
           <ul>
-            <li><img src="../../image/visa.png" /></li>
-            <li><img src="../../image/jcb.png" /></li>
-            <li><img src="../../image/paypal.png" /></li>
-            <li>
-              <img src="../../image/shoppepay.png" />
-            </li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><div class="brand brand1"></div></li>
+            <li><div class="brand brand2"></div></li>
+            <li><div class="brand brand3"></div></li>
+            <li><div class="brand brand4"></div></li>
+            <li><div class="brand brand5"></div></li>
+            <li><div class="brand brand6"></div></li>
+            <li><div class="brand brand7"></div></li>
           </ul>
         </div>
         <div class="title">ĐƠN VỊ VẬN CHUYỂN</div>
         <div class="pay">
           <ul>
-            <li><img src="../../image/visa.png" /></li>
-            <li><img src="../../image/jcb.png" /></li>
-            <li><img src="../../image/paypal.png" /></li>
-            <li>
-              <img src="../../image/shoppepay.png" />
-            </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><div class="brand"></div></li>
+            <li><div class="brand"></div></li>
+            <li><div class="brand"></div></li>
+            <li><div class="brand"></div></li>
+            <li><div class="brand"></div></li>
+            <li><div class="brand"></div></li>
+            <li><div class="brand"></div></li>
+            <li><div class="brand"></div></li>
+            <li><div class="brand"></div></li>
+            <li><div class="brand"></div></li>
+            <li><div class="brand"></div></li>
           </ul>
         </div>
       </div>
@@ -134,7 +131,47 @@ export default {
 </script>
 
 <style scoped>
-.national {
+.brand {
+  background-image: url("../../image/brand.png");
+  width: 55px;
+  height: 18px;
+}
+
+.brand1 {
+  background-size: 1203.6363636363637% 1194.4444444444443%;
+  background-position: 100% 44.16243654822335%;
+}
+
+.brand2 {
+  background-size: 1203.6363636363637% 741.3793103448276%;
+  background-position: 63.26194398682043% 54.83870967741935%;
+}
+
+.brand3 {
+  background-size: 1203.6363636363637% 934.7826086956521%;
+  background-position: 63.26194398682043% 30.729166666666668%;
+}
+
+.brand4 {
+  background-size: 1324% 977.2727272727273%;
+  background-position: 1.6339869281045751% 5.181347150259067%;
+}
+
+.brand5 {
+  background-size: 1324% 741.3793103448276%;
+  background-position: 99.50980392156863% 5.376344086021505%;
+}
+
+.brand6 {
+  background-size: 1203.6363636363637% 741.3793103448276%;
+  background-position: 100% 67.20430107526882%;
+}
+
+.brand7 {
+  background-size: 472.85714285714283% 377.1929824561403%;
+  background-position: 86.01532567049809% 6.329113924050633%;
+}
+.bracd .national {
   padding: 0 5px;
   height: fit-content;
   color: rgba(0, 0, 0, 0.54);
@@ -202,6 +239,7 @@ ul li:hover {
   margin: 2px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 img {

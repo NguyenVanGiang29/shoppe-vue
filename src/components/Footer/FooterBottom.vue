@@ -37,7 +37,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .container-footer-bottom {
   height: 312px;
   background: #f5f5f5;

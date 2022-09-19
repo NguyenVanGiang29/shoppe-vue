@@ -107,13 +107,71 @@
               </div>
               <div class="time-notication">
                 <p>07:23 12-09-2022</p>
-                <img src="../../image/dropdown_grey.png" />
+                <img
+                  v-if="!isOpenDetailOrder"
+                  @click="handleOpenDetailOrder()"
+                  src="../../image/dropdown_grey.png"
+                />
+                <img
+                  v-if="isOpenDetailOrder"
+                  @click="handleOpenDetailOrder()"
+                  src="../../image/edit.png"
+                />
               </div>
             </div>
             <div class="option-button">
               <button>Đánh Giá Sản Phẩm</button>
             </div>
           </div>
+          <Transition name="detailOrder">
+            <div v-show="isOpenDetailOrder" class="detail-order">
+              <div class="status-order">
+                <div class="left">
+                  <span class="dot"></span>
+                </div>
+                <div class="right">
+                  <div class="title-status">Xác nhận đã nhận hàng</div>
+                  <div class="content-status">
+                    Vui lòng chọn "Đã Nhận Được Hàng" cho đơn
+                    <b>220902PU3KB9SV</b> , nếu bạn hài lòng với tất cả sản phẩm
+                    và không có nhu cầu Trả hàng / Hoàn tiền. Đánh giá ngay và
+                    nhận <b>200</b> Xu.
+                  </div>
+                  <p class="content-status">07:23 12-09-2022</p>
+                </div>
+              </div>
+              <div class="status-order">
+                <div class="left">
+                  <span class="dot"></span>
+                </div>
+                <div class="right">
+                  <div class="title-status">Xác nhận đã nhận hàng</div>
+                  <div class="content-status">
+                    Vui lòng chọn "Đã Nhận Được Hàng" cho đơn
+                    <b>220902PU3KB9SV</b> , nếu bạn hài lòng với tất cả sản phẩm
+                    và không có nhu cầu Trả hàng / Hoàn tiền. Đánh giá ngay và
+                    nhận <b>200</b> Xu.
+                  </div>
+                  <p class="content-status">07:23 12-09-2022</p>
+                </div>
+              </div>
+              <div class="status-order">
+                <div class="left">
+                  <span class="dot"></span>
+                </div>
+                <div class="right">
+                  <div class="title-status">Xác nhận đã nhận hàng</div>
+                  <div class="content-status">
+                    Vui lòng chọn "Đã Nhận Được Hàng" cho đơn
+                    <b>220902PU3KB9SV</b> , nếu bạn hài lòng với tất cả sản phẩm
+                    và không có nhu cầu Trả hàng / Hoàn tiền. Đánh giá ngay và
+                    nhận <b>200</b> Xu.
+                  </div>
+                  <p class="content-status">07:23 12-09-2022</p>
+                </div>
+              </div>
+            </div>
+          </Transition>
           <div class="item-notication">
             <div class="icon-notication">
               <img
@@ -218,6 +276,16 @@
 <script>
 export default {
   name: "NoticationOrder",
+  data() {
+    return {
+      isOpenDetailOrder: false,
+    };
+  },
+  methods: {
+    handleOpenDetailOrder() {
+      this.isOpenDetailOrder = !this.isOpenDetailOrder;
+    },
+  },
 };
 </script>
 
@@ -229,8 +297,8 @@ export default {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-  height: 1000px;
-  padding-top: 20px;
+  height: max-content;
+  padding: 20px 0 50px 0;
 }
 
 .notication-left {
@@ -412,5 +480,85 @@ ul li {
 .option-button button:hover {
   color: #ee4d2d;
   border: 1px solid #ee4d2d;
+}
+
+.detail-order {
+  height: max-content;
+  width: 100%;
+  background: #faf8f8;
+}
+
+.detailOrder-enter-active,
+.detailOrder-leave-active {
+  transition: height 0.3s ease;
+  height: 500px;
+}
+
+.detailOrder-enter-from,
+.detailOrder-leave-to {
+  height: 0;
+}
+.status-order {
+  height: 135px;
+  padding: 20px;
+  display: flex;
+}
+
+.status-order:hover {
+  cursor: pointer;
+}
+
+.status-order .left {
+  width: 80px;
+  margin-right: 20px;
+  height: 100%;
+  position: relative;
+}
+
+.status-order .right {
+  flex-grow: 1;
+}
+
+.status-order .left::before {
+  content: " ";
+  border-left: 1px solid #bbb;
+  position: absolute;
+  left: 0;
+  height: 20px;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.status-order .left::after {
+  content: " ";
+  border-left: 1px solid #bbb;
+  position: absolute;
+  left: 50%;
+  height: calc(100% + 20px);
+  transform: translate(-50%);
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.title-status {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.content-status {
+  font-size: 14px;
+  margin-bottom: 0.3125rem;
+  color: rgba(0, 0, 0, 0.54);
 }
 </style>

@@ -1,5 +1,7 @@
 <template>
   <div class="container">
+    <div>{{ !message ? "giang" : "dang" }}</div>
+    <a :[attributeName]="urlFacebook">123</a>
     <div style="margin-top: 50px">
       <img src="https://cf.shopee.vn/file/85df50b108d854fed304eb2424b9fc18" />
     </div>
@@ -31,6 +33,14 @@
 <script>
 export default {
   name: "TimeSaleView",
+  data() {
+    return {
+      message: "giaaaang",
+      content1: "<h1>Giang</h1>",
+      urlFacebook: "facebook-url",
+      attributeName: "class",
+    };
+  },
 };
 </script>
 
@@ -51,7 +61,15 @@ img {
 .left-voucher {
   aspect-ratio: 1/1;
   background: rgb(38, 170, 153);
+  position: relative;
+}
+
+.left-voucher::before {
+  content: "";
+  position: absolute;
+  height: 100%;
   border-left: 20px dotted #fff;
+  transform: translate(-50%);
 }
 
 .right-voucher {
