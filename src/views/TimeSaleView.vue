@@ -1,7 +1,38 @@
 <template>
   <div class="container">
-    <div>{{ !message ? "giang" : "dang" }}</div>
-    <a :[attributeName]="urlFacebook">123</a>
+    <div class="view-image">
+      <div class="image-show">
+        <img :src="`${srcImage}`" />
+      </div>
+      <div class="images">
+        <div class="image" @mouseover="showImage($event)">
+          <img
+            src="https://cf.shopee.vn/file/436c9db6309246b065839d49bac886a4"
+          />
+        </div>
+        <div class="image" @mouseover="showImage($event)">
+          <img
+            src="https://cf.shopee.vn/file/0ecb597da925cd8bbb88e64cda9e8ebe"
+          />
+        </div>
+        <div class="image" @mouseover="showImage($event)">
+          <img
+            src="https://cf.shopee.vn/file/4dc19ecc82db942e97b0e117c8fac66a"
+          />
+        </div>
+        <div class="image" @mouseover="showImage($event)">
+          <img
+            src="https://cf.shopee.vn/file/93513a26d5ec983576efc6ff26a709b9"
+          />
+        </div>
+        <div class="image" @mouseover="showImage($event)">
+          <img
+            src="https://cf.shopee.vn/file/0bd26572284148f13a507a80fc2d5420"
+          />
+        </div>
+      </div>
+    </div>
+
     <div style="margin-top: 50px">
       <img src="https://cf.shopee.vn/file/85df50b108d854fed304eb2424b9fc18" />
     </div>
@@ -39,12 +70,51 @@ export default {
       content1: "<h1>Giang</h1>",
       urlFacebook: "facebook-url",
       attributeName: "class",
+      srcImage: "https://cf.shopee.vn/file/436c9db6309246b065839d49bac886a4",
     };
+  },
+  methods: {
+    showImage(event) {
+      this.srcImage = event.srcElement.src;
+    },
   },
 };
 </script>
 
 <style scoped>
+.view-image {
+  height: 800px;
+  width: 800px;
+  margin: 30px auto;
+}
+
+.image-show {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.images {
+  width: 50%;
+  height: 200px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.image {
+  height: 50%;
+  flex-grow: 1;
+  margin: 3px;
+}
+
+img {
+  height: 100%;
+  object-fit: contain;
+}
+
+img:hover {
+  opacity: 0.5;
+}
 .container {
   margin: 10px auto;
   width: 960px;

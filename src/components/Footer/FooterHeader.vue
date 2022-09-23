@@ -171,7 +171,7 @@ export default {
   background-size: 472.85714285714283% 377.1929824561403%;
   background-position: 86.01532567049809% 6.329113924050633%;
 }
-.bracd .national {
+.national {
   padding: 0 5px;
   height: fit-content;
   color: rgba(0, 0, 0, 0.54);
